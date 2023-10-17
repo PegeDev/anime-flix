@@ -13,7 +13,7 @@ export default async function Home() {
     <div className="w-full h-full max-w-4xl mx-auto">
       <div className="flex flex-col gap-6">
         <div className="h-[500px] bg-primary relative w-full">
-          <div className=" w-full h-full bg-gray-500 overflow-hidden">
+          <div className="relative w-full h-full bg-gray-500 overflow-hidden">
             <ImageLoader
               src={hero?.data?.images?.webp?.large_image_url}
               alt="Random Anime"

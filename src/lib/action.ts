@@ -2,7 +2,8 @@ import axiosInstance from "./axiosInstances";
 
 export async function getRandomAnime() {
   try {
-    const { data } = await axiosInstance.get("/v4/random/anime");
+    const res = await fetch(`${process.env.API_URL}/v4/random/anime`);
+    const data = await res.json();
     return data;
   } catch (error) {
     console.log({ error });
@@ -12,9 +13,10 @@ export async function getRandomAnime() {
 
 export async function getTopAnime(limit = 8, page = 1) {
   try {
-    const { data } = await axiosInstance.get(
-      `/v4/top/anime?limit=${limit}&page=${page}`
+    const res = await fetch(
+      `${process.env.API_URL}/v4/top/anime?limit=${limit}&page=${page}`
     );
+    const data = await res.json();
     return data;
   } catch (error) {
     console.log({ error });
@@ -24,9 +26,10 @@ export async function getTopAnime(limit = 8, page = 1) {
 
 export async function getTopManga(limit = 8, page = 0) {
   try {
-    const { data } = await axiosInstance.get(
-      `/v4/top/manga?limit=${limit}&page=${page}`
+    const res = await fetch(
+      `${process.env.API_URL}/v4/top/manga?limit=${limit}&page=${page}`
     );
+    const data = await res.json();
     return data;
   } catch (error) {
     console.log({ error });
@@ -36,9 +39,10 @@ export async function getTopManga(limit = 8, page = 0) {
 
 export async function getSearchContent(input = "", limit = 8) {
   try {
-    const { data } = await axiosInstance.get(
-      `/v4/anime?q=${input}&sort=desc&limit=${limit}`
+    const res = await fetch(
+      `${process.env.API_URL}/v4/anime?q=${input}&sort=desc&limit=${limit}`
     );
+    const data = await res.json();
     return data;
   } catch (error) {
     console.log({ error });
