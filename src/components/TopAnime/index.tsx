@@ -26,14 +26,14 @@ export default async function TopAnime({
           Top Anime List
         </h2>
         {!isPage ? (
-          <Link href={"/top/anime"}>
+          <a href={"/top/anime"}>
             <span className="flex items-center gap-4">
               <span className="text-white">See all</span>
               <span>
                 <ChevronIcon className="text-white" width="24" height="24" />
               </span>
             </span>
-          </Link>
+          </a>
         ) : null}
       </div>
       <ListItem currPage={parseInt(page)} data={data} isPage={isPage} />
