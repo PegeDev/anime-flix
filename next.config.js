@@ -13,7 +13,6 @@ const nextConfig = {
               ["none"]: "currentColor",
               ["#000"]: "currentColor",
             },
-            typescript: true,
             ext: "tsx",
           },
         },
