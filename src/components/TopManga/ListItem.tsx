@@ -6,7 +6,7 @@ import { truncate } from "@/utils/format";
 import ImageLoader from "../ImageLoader";
 import ReactPaginate from "react-paginate";
 import clsx from "clsx";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface listItem {
@@ -27,7 +27,7 @@ export default function ListItem({ data, isPage, currPage }: listItem) {
     router.push(`/top/manga/${page}`);
   };
   return (
-    <>
+    <React.Fragment>
       <div className="grid md:grid-cols-4 sm:grid-cols-2  gap-4 mb-8">
         {data?.data?.map((item: any, i: any) => {
           return (
@@ -132,6 +132,6 @@ export default function ListItem({ data, isPage, currPage }: listItem) {
           forcePage={currPage - 1}
         />
       ) : null}
-    </>
+    </React.Fragment>
   );
 }

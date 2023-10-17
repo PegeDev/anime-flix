@@ -4,7 +4,7 @@ import EyeIcon from "../../../public/icons/eye.svg";
 import FavoriteIcon from "../../../public/icons/favorite.svg";
 import { truncate } from "@/utils/format";
 import ImageLoader from "../ImageLoader";
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
 import clsx from "clsx";
 import { useRouter } from "next/navigation";
@@ -28,7 +28,7 @@ export default function ListItem({ data, isPage, currPage, input }: listItem) {
     router.push(`/search/${input}/${page}`);
   };
   return (
-    <>
+    <React.Fragment>
       <div className="grid md:grid-cols-4 sm:grid-cols-2  gap-4 mb-8">
         {items.length !== 0 ? (
           items?.map((item: any, i: any) => {
@@ -141,6 +141,6 @@ export default function ListItem({ data, isPage, currPage, input }: listItem) {
           forcePage={currPage - 1}
         />
       ) : null}
-    </>
+    </React.Fragment>
   );
 }
