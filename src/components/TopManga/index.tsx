@@ -18,7 +18,7 @@ export default async function TopManga({
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-white font-semibold text-xl ">Top Manga List</h2>
         {!isPage ? (
-          <Link href={"/top/anime"}>
+          <Link href={"/top/manga"}>
             <span className="flex items-center gap-4">
               <span className="text-white">See all</span>
               <span>
