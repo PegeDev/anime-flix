@@ -18,14 +18,14 @@ export default async function TopManga({
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-white font-semibold text-xl ">Top Manga List</h2>
         {!isPage ? (
-          <a href={"/top/manga"}>
+          <Link href={"/top/manga"}>
             <span className="flex items-center gap-4">
               <span className="text-white">See all</span>
               <span>
                 <ChevronIcon className="text-white" width="24" height="24" />
               </span>
             </span>
-          </a>
+          </Link>
         ) : null}
       </div>
       <ListItem currPage={parseInt(page)} data={data} isPage={isPage} />

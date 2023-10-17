@@ -25,11 +25,11 @@ export default function Navbar() {
       <nav className="w-full sticky top-0 backdrop-filter bg-primary/80 backdrop-blur-lg z-50">
         <div className="max-w-4xl mx-auto relative">
           <div className="flex items-center p-4 justify-between">
-            <a href="/">
+            <Link href="/">
               <span className="p-4 text-white font-bold text-4xl">
                 AnimeFlix
               </span>
-            </a>
+            </Link>
             <div className="hidden md:flex">
               <ul className="flex justify-center items-center gap-2 ">
                 <li
@@ -38,7 +38,7 @@ export default function Navbar() {
                     pathname.includes("home") ? "font-semibold underline" : null
                   )}
                 >
-                  <a href="/">Home</a>
+                  <Link href="/">Home</Link>
                 </li>
                 <li
                   className={clsx(
@@ -48,7 +48,7 @@ export default function Navbar() {
                       : null
                   )}
                 >
-                  <a href="/top/anime">Anime</a>
+                  <Link href="/top/anime">Anime</Link>
                 </li>
                 <li
                   className={clsx(
@@ -58,7 +58,7 @@ export default function Navbar() {
                       : null
                   )}
                 >
-                  <a href="/top/manga">Manga</a>
+                  <Link href="/top/manga">Manga</Link>
                 </li>
               </ul>
             </div>
@@ -94,7 +94,7 @@ export default function Navbar() {
                 pathname.includes("home") ? "font-semibold underline" : null
               )}
             >
-              <a href="/">Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li
               className={clsx(
@@ -102,7 +102,7 @@ export default function Navbar() {
                 pathname.includes("anime") ? "font-semibold underline" : null
               )}
             >
-              <a href="/top/anime">Anime</a>
+              <Link href="/top/anime">Anime</Link>
             </li>
             <li
               className={clsx(
@@ -110,7 +110,7 @@ export default function Navbar() {
                 pathname.includes("manga") ? "font-semibold underline" : null
               )}
             >
-              <a href="/top/manga">Manga</a>
+              <Link href="/top/manga">Manga</Link>
             </li>
           </ul>
           <div className="flex gap-2 items-center">

@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: false,
   webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.svg$/i,
