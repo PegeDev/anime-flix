@@ -16,7 +16,6 @@ interface listItem {
 }
 
 export default function ListItem({ data, isPage, currPage }: listItem) {
-  const [items, setItems] = useState([...data?.data]);
   const limit = data?.pagination?.items?.per_page;
   const totalItems = data?.pagination?.items?.total;
   const totalPages = Math.ceil(totalItems / limit);

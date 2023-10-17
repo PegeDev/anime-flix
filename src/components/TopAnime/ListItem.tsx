@@ -19,7 +19,6 @@ interface listItem {
 }
 
 export default function ListItem({ data, isPage, currPage }: listItem) {
-  const [items, setItems] = useState([...data?.data]);
   const limit = data?.pagination?.items?.per_page;
   const totalItems = data?.pagination?.items?.total;
   const totalPages = Math.ceil(totalItems / limit);
@@ -32,7 +31,7 @@ export default function ListItem({ data, isPage, currPage }: listItem) {
   return (
     <React.Fragment>
       <div className="grid md:grid-cols-4 sm:grid-cols-2  gap-4 mb-8">
-        {items?.map((item: any, i: any) => {
+        {data?.data?.map((item: any, i: any) => {
           return (
             <div
               key={i}
