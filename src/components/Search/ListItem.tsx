@@ -7,10 +7,7 @@ import ImageLoader from "../ImageLoader";
 import { useState } from "react";
 import ReactPaginate from "react-paginate";
 import clsx from "clsx";
-import { getTopAnime } from "@/lib/action";
-import axiosInstance from "@/lib/axiosInstances";
-import axios from "axios";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 interface listItem {
   data: any;
@@ -25,7 +22,6 @@ export default function ListItem({ data, isPage, currPage, input }: listItem) {
   const totalItems = data?.pagination?.items?.total;
   const totalPages = Math.ceil(totalItems / limit);
   const router = useRouter();
-  const params = useSearchParams();
 
   const handlePageClick = async (event: any) => {
     const page = event.selected + 1;
