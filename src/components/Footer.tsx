@@ -7,21 +7,15 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center  justify-center md:divide-x-2">
           <div className="flex items-center justify-center gap-2 text-white px-4 ">
             <p className="whitespace-nowrap">Powered by</p>
-            <Link
-              className="text-semibold underline"
-              href={"https://jikan.moe/"}
-            >
+            <a className="text-semibold underline" href={"https://jikan.moe/"}>
               JikanAPI
-            </Link>
+            </a>
           </div>
           <div className="flex items-center justify-center gap-2 text-white px-4 ">
             <p className="whitespace-nowrap">Designed by</p>
-            <Link
-              className="text-semibold underline"
-              href={"https://jikan.moe/"}
-            >
+            <a className="text-semibold underline" href={"https://jikan.moe/"}>
               Pega
-            </Link>
+            </a>
           </div>
         </div>
       </div>
