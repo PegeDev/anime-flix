@@ -83,7 +83,7 @@ export default function Navbar() {
       <div
         className={clsx(
           "md:hidden fixed z-40 w-full  overflow-hidden transition-all ease-linear backdrop-filter bg-primary/80 backdrop-blur-lg",
-          menu ? "-top-56" : "top-24"
+          !menu ? "-top-56" : "top-24"
         )}
       >
         <div className="flex flex-col p-4 items-center justify-center">
